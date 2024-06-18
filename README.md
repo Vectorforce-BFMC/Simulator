@@ -6,8 +6,11 @@ From new parkour:
 
 From added RVIZ:
 
-
 <img src="https://github.com/KOU-Mekatronom/Simulator/blob/main/rviz.png" width=30% height=30%>
+
+Traffic lights plugin:
+
+<gif src="https://github.com/KOU-Mekatronom/Simulator/blob/main/traffic_lights_pkg.png>" width=30% height =30%>
 
 # BFMC Simulator Project
 
@@ -25,10 +28,10 @@ From KOU-Mekatronom team:
 - Added urdf and lidar.sdf 
 - It has laser_scan now topic name is ```/automobile/scan``` for bostacle_detection.
 - Added TF2 package the tf tree visualization ```frames.pdf``` 
+- Added traffic lights publisher, ```src/sim_pkg/launch/sublaunchers/traffic_lights.launch```
 
 
 Tips on how to install and work on it, can be found in the 
-
 
 ## The documentation is available in details here:
 [Documentation](https://bosch-future-mobility-challenge-documentation.readthedocs-hosted.com/data/simulator.html)
