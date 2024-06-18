@@ -10,7 +10,7 @@ From added RVIZ:
 
 Traffic lights plugin:
 
-<img src="https://github.com/KOU-Mekatronom/Simulator/blob/main/traffic_lights_pkg.png>" width=30% height =30%>
+<img src="https://github.com/KOU-Mekatronom/Simulator/blob/main/traffic_lights_pkg.gif" width=30% height =30%>
 
 # BFMC Simulator Project
 
