@@ -385,7 +385,7 @@
       </steer_wheel_joints>
       <initial_steer>0.0</initial_steer>
       <initial_speed>0.0</initial_speed>
-      <robotNamespace>/</robotNamespace>
+      <robotNamespace>automobile</robotNamespace>
     </plugin>
 
     <plugin name='bno055' filename='libbno055_plugin.so'> </plugin>
