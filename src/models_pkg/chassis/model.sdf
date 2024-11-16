@@ -14,12 +14,12 @@
         </inertia>
         <pose frame=''>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose frame=''>0 0 0 0 0 1.5708</pose>
+      <pose frame=''>0 0 0 0 0 0.0</pose>
       <gravity>1</gravity>
       <kinematic>0</kinematic>
       <enable_wind>0</enable_wind>
       <visual name='visual'>
-        <pose frame=''>0 0 -0.0065 0 0 -1.57079</pose>
+        <pose frame=''>0 0 -0.0065 0 0 0.0</pose>
         <geometry>
           <mesh>
             <uri>model://chassis/meshes/chassisV5.dae</uri>
