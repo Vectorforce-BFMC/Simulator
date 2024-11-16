@@ -37,7 +37,7 @@ class trafficlight():
         self.TL_interval = 1
 
         #Initialize the node
-        rospy.init_node('traffic_light_publisher_node', anonymous=True)
+        rospy.init_node('traffic_light_publisher_node', anonymous=False)
 
         self.trafficlights = []
         #Create a new publisher, specify the topic name, type of message and queue size
@@ -70,16 +70,16 @@ class trafficlight():
             self.Color.RED,
 
             self.Color.YELLOW,
-            self.Color.YELLOW,
+            # self.Color.YELLOW,
             
             self.Color.GREEN,
             self.Color.GREEN,
-            self.Color.GREEN,
-            self.Color.GREEN,
-            self.Color.GREEN,
+            # self.Color.GREEN,
+            # self.Color.GREEN,
+            # self.Color.GREEN,
 
             self.Color.YELLOW,
-            self.Color.YELLOW
+            # self.Color.YELLOW
         ]        
     
         # Cycles of patterns
@@ -102,7 +102,7 @@ class trafficlight():
             #Send State for the start semaphore
             self.sendState(3, self.mirrorLight(self.main_state))
 
-            self.rate.sleep() #publish at 10hz
+            self.rate.sleep() 
 
 if __name__ == '__main__':
     try:
