@@ -133,6 +133,8 @@ From KOU-Mekatronom team:
 - Added urdf and lidar.sdf 
 - It has laser_scan now topic name is ```/automobile/scan``` for bostacle_detection.
 - Added TF2 package the tf tree visualization ```frames.pdf``` 
+- Added traffic lights publisher, ```src/sim_pkg/launch/sublaunchers/traffic_lights.launch```
+- In your main code you need to subscribe ``` automobile/trafficlight/master,slave,start topics```
 
 
 Tips on how to install and work on it, can be found in the 
