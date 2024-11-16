@@ -2,8 +2,6 @@ version: '3'
 services:
   autonomous_ws:
     build: .
-    working_dir: /home/Renbago
-    command: bash -c "ln -fs /code/node_modules /code/app/node_modules && exec npm run dev"
     volumes:
       - type: bind 
         source: /tmp/.X11-unix
@@ -18,7 +16,7 @@ services:
       - 'c 81:* rmw'
       - 'c 189:* rmw'      
     environment:
-      - DISPLAY=:0
+      - DISPLAY=:1
       - TZ=Turkey
     container_name: autonomous_ws
     command: /bin/bash

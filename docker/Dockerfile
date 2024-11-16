@@ -3,12 +3,9 @@ FROM osrf/ros:noetic-desktop-full
 SHELL ["bash", "-c"]
 
 ARG USERNAME=Renbago
-
-RUN useradd -m -s /bin/bash $USERNAME
-
-RUN echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
-
-RUN mkdir -p /home/$USERNAME && chown -R $USERNAME:$USERNAME /home/$USERNAME
+RUN useradd -m -s /bin/bash $USERNAME && \
+    echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
+    chown -R $USERNAME:$USERNAME /home/$USERNAME
 
 USER root
 
@@ -58,6 +55,8 @@ RUN pip3 install casadi
 WORKDIR /home/$USERNAME
 RUN mkdir -p autonomus_ws/src && chown -R $USERNAME:$USERNAME autonomus_ws
 RUN cd autonomus_ws/src && git clone -b devel https://github.com/Renbago/autonomus_vehicle.git
+WORKDIR /home/$USERNAME/autonomus_ws
+RUN /bin/bash -c '. /opt/ros/noetic/setup.bash; catkin_make'
 
 # Here is setting the necessery gazebo and ros package  and also chmod+x all of it.
 USER $USERNAME
