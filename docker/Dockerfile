@@ -32,6 +32,7 @@ RUN apt-get update && apt-get install -y \
     ros-noetic-message-runtime \
     ros-noetic-cv-bridge \
     ros-noetic-image-transport \
+    ros-noetic-map-server \
     libeigen3-dev \
     ros-noetic-tf2-sensor-msgs \
     libpugixml-dev \
@@ -59,6 +60,8 @@ RUN cd autonomus_ws/src && git clone -b devel https://github.com/Renbago/autonom
 WORKDIR /home/$USERNAME/autonomus_ws
 RUN /bin/bash -c '. /opt/ros/noetic/setup.bash; catkin_make'
 
+USER root 
+RUN apt-get update 
 # Here is setting the necessery gazebo and ros package  and also chmod+x all of it.
 USER $USERNAME
 RUN echo "if [ -f /etc/bash_completion ]; then" >> ~/.bashrc && \

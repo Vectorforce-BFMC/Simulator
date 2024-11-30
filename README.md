@@ -88,6 +88,10 @@ at one terminal:
 the second terminal:
 ```rosrun example mpc_node```
 
+or
+
+```rosrun example mpc.py```
+
 # IMPORTANT
 The ```mpc_node.cpp``` version has not been fully finished, you can run ```rosrun example mpc.py``` when launched ```map_with_car.launch``` also obstacle_detector will be executed.
 
@@ -105,6 +109,10 @@ The ```mpc_node.cpp``` version has not been fully finished, you can run ```rosru
 
 <img src="https://github.com/KOU-Mekatronom/Simulator/blob/main/rviz.png" width=30% height=30%>
 
+# Obstacle detection
+
+<img src="https://github.com/KOU-Mekatronom/Simulator/blob/main/obstacle_detection.png" width=30% height=30%>
+
 # Traffic lights plugin:
 
 <img src="https://github.com/KOU-Mekatronom/Simulator/blob/main/traffic_lights_pkg.gif" width=30% height =30%>
@@ -118,6 +126,16 @@ The project contains the entire Gazebo simulator.
 - It can be used to set-up a configuration procedure for the real track
 - Not suggested for image processing
 - Try not to fall in the "continuous simulator developing" trap
+
+From KOU-Mekatronom team:
+- It has robot_localization package, you can fuse the gps and IMU data easily.
+- Robot_localization package config path is ```src/example/config/ekf_localization.yaml```
+- Added urdf and lidar.sdf 
+- It has laser_scan now topic name is ```/automobile/scan``` for bostacle_detection.
+- Added TF2 package the tf tree visualization ```frames.pdf``` 
+- Added traffic lights publisher, ```src/sim_pkg/launch/sublaunchers/traffic_lights.launch```
+- In your main code you need to subscribe ``` automobile/trafficlight/master,slave,start topics```
+
 
 Tips on how to install and work on it, can be found in the 
 
