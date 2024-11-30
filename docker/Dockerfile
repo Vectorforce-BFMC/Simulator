@@ -26,6 +26,7 @@ RUN apt-get update && apt-get install -y \
     ros-noetic-std-msgs \
     ros-noetic-rospy \
     ros-noetic-roscpp \
+    ros-noetic-map-server \
     ros-noetic-sensor-msgs \
     ros-noetic-message-generation \
     ros-noetic-message-runtime \
@@ -72,4 +73,3 @@ RUN echo "if [ -f /etc/bash_completion ]; then" >> ~/.bashrc && \
     echo 'source /home/'$USERNAME'/autonomus_ws/devel/setup.bash' >> ~/.bashrc && \
     find /home/$USERNAME/autonomus_ws/src/autonomus_vehicle -type f -name "*.py" -exec chmod +x {} \; && \
     find /home/$USERNAME/autonomus_ws/src/autonomus_vehicle -type f -name "*.cpp" -exec chmod +x {} \;
-
